@@ -8,7 +8,7 @@ const { passport } = require("./config/GoogleOauth");
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://dev-sync-6lco.vercel.app"],
+    origin: ["http://localhost:5173", "https://dev-sync-6lco.vercel.app","https://devsynceditors.netlify.app"],
   })
 );
 
@@ -34,7 +34,7 @@ app.get(
   function (req, res) {
     const successMessage = "Google OAuth authentication successful";
     res.redirect(
-      `https://dev-sync-6lco.vercel.app/codeEditor?message=${encodeURIComponent(
+      `https://devsynceditors.netlify.app/codeEditor?message=${encodeURIComponent(
         successMessage
       )}`
     );
