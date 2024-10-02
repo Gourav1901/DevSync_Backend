@@ -62,6 +62,8 @@ const loginUser = async (req, res) => {
       status: "success",
       msg: "User login successfully",
       username: findUserWithMail.username,
+      refresh_token:refresh_token,
+      access_token:access_token
     });
   } catch (error) {
     res.status(400).send({ status: "fail", msg: error.message });
