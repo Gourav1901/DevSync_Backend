@@ -4,6 +4,7 @@ const { connectionToDB } = require("./config/db");
 const app = express();
 const port = 3000;
 const { passport } = require("./config/GoogleOauth");
+const { userRouter } = require("./routes/User.routes");
 
 app.use(express.json());
 app.use(
@@ -13,9 +14,10 @@ app.use(
       "https://dev-sync-6lco.vercel.app",
       "https://devsynceditors.netlify.app",
     ],
+    credentials: true,
   })
 );
-
+app.use("/user", userRouter);
 app.get("/", async (req, res) => {
   res.send("Home-page for goolge Oauth");
 });
