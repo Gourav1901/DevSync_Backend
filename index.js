@@ -12,6 +12,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://dev-sync-6lco.vercel.app",
+      "https://dev-sync-nine.vercel.app",
       "https://devsynceditors.netlify.app",
     ],
     credentials: true,
